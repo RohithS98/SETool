@@ -7,6 +7,7 @@ const storage = chrome.storage.sync || chrome.storage.local
 var repoName
 var branchName
 var filePath
+var fileType
 
 let githubToken
 
@@ -66,24 +67,33 @@ function getPullNo(text){
   return l[l.length-1]
 }
 
+function getRepoExtensionURI(uri){
+  uri1 = uri.split('/')
+  t = uri1.slice(-1)[0].split('.')
+  if(t.length === 1){
+    return null
+  }
+  return t.slice(-1)[0]
+}
+
 const getFileName = (text) => text.trim().split('/')[0]
 
-function a(response){
+function getStats(response){
   var code = atob(response['content'])
 }
 
 function click1(){
-  console.log(repoName, branchName, filePath)
-  getAPIData(a)
+  console.log(repoName, branchName, filePath, fileType)
+  getAPIData(getStats)
 }
 
 const checkForRepoPage = () => {
   let repoURI = window.location.pathname.substring(1)
   repoURIp = repoURI.endsWith('/') ? repoURI.slice(0, -1) : repoURI
-  console.log(repoURI)
   repoName = getRepoInfoURI(repoURIp)
   branchName = getRepoBranchURI(repoURIp)
   filePath = getRepoFileURI(repoURIp)
+  fileType = getRepoExtensionURI(repoURIp)
   if (isValidFile(repoURIp)) {
     const ns = document.querySelector('body > div.application-main > div > main > div.container-lg.new-discussion-timeline.experiment-repo-nav.p-responsive > div.repository-content > div.d-flex.flex-items-start.mb-3.flex-column.flex-md-row > div')
     ns.innerHTML += "<button style=\"height=5px;width=5px;\" class=\"infoButtonFiles btn btn-sm BtnGroup-item\">Analyze</button>"

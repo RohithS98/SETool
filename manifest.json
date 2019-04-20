@@ -1,4 +1,4 @@
-{
+﻿{
   "manifest_version":2,
   "name":"VSMetric2",
   "description":"Visualizes the code metrics of an open pull request before and after it is merged.",
@@ -12,7 +12,7 @@
   },
   "content_scripts":[{
     "matches":["https://github.com/*/*/blob/*/*"],
-    "js":["jquery-1.9.1.min.js","inject.js","fileIter.js"],
+    "js":["jquery-1.9.1.min.js","inject.js"],
     "css":["metric.css"]
   }],
   "page_action":{
