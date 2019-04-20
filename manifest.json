@@ -1,0 +1,25 @@
+{
+  "manifest_version":2,
+  "name":"VSMetric2",
+  "description":"Visualizes the code metrics of an open pull request before and after it is merged.",
+  "version":"1.1",
+  "homepage_url":"http://github.com",
+  "content_security_policy":"script-src 'self' 'unsafe-eval'; object-src 'self' ",
+  "permissions":["storage"
+                ,"activeTab"],
+  "background":{
+    "scripts":["background.js"]
+  },
+  "content_scripts":[{
+    "matches":["https://github.com/*/*/blob/*/*"],
+    "js":["jquery-1.9.1.min.js","inject.js","fileIter.js"],
+    "css":["metric.css"]
+  }],
+  "page_action":{
+    "default_icon":"sample.png",
+    "default_title":"Metric Visualization"
+  },
+  "web_accessible_resources":[
+    "jquery-1.9.1.min.js"
+  ]
+}
