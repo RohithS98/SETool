@@ -52,7 +52,13 @@ const parseJSON = (response) => {
 
 const getAPIData = (callback) => {
 
-  const request = new Request(API + repoName + '/contents/' + filePath + '/?ref=' + branchName)
+  const headerObj = {
+    'User-Agent': 'request'
+  }
+
+  const request = new Request(API + repoName + '/contents/' + filePath + '/?ref=' + branchName,{
+    headers: new Headers(headerObj)
+  })
   console.log(request)
 
   fetch(request)
@@ -80,6 +86,7 @@ const getFileName = (text) => text.trim().split('/')[0]
 
 function getStats(response){
   var code = atob(response['content'])
+  console.log(code)
 }
 
 function click1(){
