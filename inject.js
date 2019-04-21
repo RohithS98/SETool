@@ -1,6 +1,7 @@
 const API = 'https://api.github.com/repos/'
 const LI_TAG_ID = 'github-repo-size'
 const GITHUB_TOKEN_KEY = 'x-github-token'
+const token = 'a489098f15abf4b4832f4bb2677703618445ae30'
 
 const storage = chrome.storage.sync || chrome.storage.local
 
@@ -55,6 +56,7 @@ const getAPIData = (callback) => {
   const headerObj = {
     'User-Agent': 'request'
   }
+  headerObj['Authorization'] = 'token ' + token
 
   const request = new Request(API + repoName + '/contents/' + filePath + '/?ref=' + branchName,{
     headers: new Headers(headerObj)
