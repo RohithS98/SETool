@@ -14,4 +14,4 @@ Metric Visualiser is a chrome plug-in for GitHub that allows visualisation of so
 
 1. Go to any GitHub repository and navigate to the required code file.
 2. Above the code, there will be a new button *Analyse*(see below). If it does not appear, then refresh the page.
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/RohithS98/SETool/blob/master/pics/p1.PNG "Logo Title Text 1")
