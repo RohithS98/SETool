@@ -2,6 +2,12 @@
 
 Metric Visualiser is a chrome plug-in for GitHub that allows visualisation of source code metrics of source code files on GitHub in the browser.
 
+## Requirements
+
+1. Google Chrome
+2. npm
+3. WAMP/MAMP
+
 ## Installation Instructions
 
 1. Download the repository
