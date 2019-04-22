@@ -7,6 +7,8 @@ Metric Visualiser is a chrome plug-in for GitHub that allows visualisation of so
 1. Google Chrome
 2. npm
 3. WAMP/MAMP
+4. Python 3
+5. Flask
 
 ## Installation Instructions
 
