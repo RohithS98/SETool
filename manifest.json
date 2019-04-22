@@ -12,8 +12,7 @@
   },
   "content_scripts":[{
     "matches":["https://github.com/*/*/blob/*/*"],
-    "js":["jquery-1.9.1.min.js","inject.js"],
-    "css":["metric.css"]
+    "js":["jquery-1.9.1.min.js","inject.js"]
   }],
   "page_action":{
     "default_icon":"sample.png",
