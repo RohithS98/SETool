@@ -98,7 +98,8 @@ function getMetrics(content) {
   return $.ajax({
       type: "POST",
       url:"http://localhost:5000/tool1.py",
-      data: { param: content },
+      data: { param1: content,
+	      param2: extensions},
       success:function(response) {
       console.log(response);
       },
