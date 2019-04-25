@@ -81,3 +81,9 @@ Then open browser with ```http://localhost:5000/tool1.py ```
 5. Before that, the lizard python file has to be run on a server for which FLASK is used.
 6. To host that on FLASK server, first install FLASK in your home directory using the instrutions given in the above section.
 7. Click on the analyze button to see the required results.
+
+## To Do
+
+1. Visualisation of metrics.
+2. Adding difference between pull requests.
+3. Extending languages and metrics available.
