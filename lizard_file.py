@@ -10,7 +10,7 @@ lizard_file=Flask(__name__)
 #Valid extensions for applying code complexity analysis
 
 def applyLizard(data_string, extension):
-    file_name = "test."+extension
+    file_name = "test."+"py"
     analysis = lizard.analyze_file.analyze_source_code(file_name, data_string)
     return analysis
 
@@ -42,7 +42,7 @@ def prettyPrint(analysis):
 	s += '\n\n'
 	return s
 
-@lizard_file.route("/tool1.py")
+@lizard_file.route("/tool1.py", methods = ['POST', 'GET'])
 def test():
 
 	'''extensions = {
@@ -55,11 +55,11 @@ def test():
 	content=request.args.get('param1')
 	extension=request.args.get('param2')
 
-	#content = """def ApplyLizard(fileList):
-	#     analysis = {}
-	#     for i in fileList:
-	#         analysis[i] = lizard.analyze_file(i)
-	#     return analysis"""
+	# content = """def ApplyLizard(fileList):
+	#      analysis = {}
+	#      for i in fileList:
+	#          analysis[i] = lizard.analyze_file(i)
+	#      return analysis"""
 	# extension ="py"
 
 	return prettyPrint(applyLizard(content, extension))
