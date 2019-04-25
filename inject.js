@@ -13,11 +13,11 @@ var fileType
 let githubToken
 
 var extensions = {
-  '.c' : 'C',
-  '.cpp' : 'C++',
-  '.java' : 'Java',
-  '.py' : 'Python',
-  '.js' : 'JavaScript'
+  'c' : 'C',
+  'cpp' : 'C++',
+  'java' : 'Java',
+  'py' : 'Python',
+  'js' : 'JavaScript'
 };
 
 const isValidFile = (uri) => {
@@ -70,7 +70,7 @@ const getAPIData = (callback) => {
     headers: new Headers(headerObj)
   })
   console.log(request)
-
+  // const proxyurl = "https://cors-anywhere.herokuapp.com";
   fetch(request)
     .then(checkStatus)
     .then(parseJSON)
@@ -96,12 +96,10 @@ const getFileName = (text) => text.trim().split('/')[0]
 
 function getMetrics(content) {
   return $.ajax({
-      type: "GET",
-      url:"http://localhost:5000/lizard_file.py",  
-      url:"http://localhost:5000/lizard_file.py",
+      type: "POST",
+      url:"http://localhost:5000/tool1.py",
       data: { param: content },
       success:function(response) {
-      console.log(response); 
       console.log(response);
       },
       error: function(response){
@@ -119,7 +117,11 @@ function getStats(response){
 function click1(){
   console.log(repoName, branchName, filePath, fileType)
   if (fileType in extensions){  // checking for valid extensions--(newly added)
+    console.log("Getting file")
     getAPIData(getStats)
+  }
+  else{
+    console.log("Unsupported type")
   }
 }
 
@@ -131,9 +133,13 @@ const checkForRepoPage = () => {
   filePath = getRepoFileURI(repoURIp)
   fileType = getRepoExtensionURI(repoURIp)
   if (isValidFile(repoURIp)) {
-    const ns = document.querySelector('body > div.application-main > div > main > div.container-lg.new-discussion-timeline.experiment-repo-nav.p-responsive > div.repository-content > div.d-flex.flex-items-start.mb-3.flex-column.flex-md-row > div')
-    ns.innerHTML += "<button style=\"height=5px;width=5px;\" class=\"infoButtonFiles btn btn-sm BtnGroup-item\">Analyze</button>"
-    const b1 = document.querySelector('body > div.application-main > div > main > div.container-lg.new-discussion-timeline.experiment-repo-nav.p-responsive > div.repository-content > div.d-flex.flex-items-start.mb-3.flex-column.flex-md-row > div > button')
+    // const ns = document.querySelector('body > div.application-main > div > main > div.container-lg.new-discussion-timeline.experiment-repo-nav.p-responsive > div.repository-content > div.d-flex.flex-items-start.mb-3.flex-column.flex-md-row > div')
+    const bp = document.getElementById("blob-path")
+    const ns = bp.nextElementSibling;
+
+    ns.innerHTML += "<button id='myAnalyzeBtn' style=\"height=5px;width=5px;\" class=\"infoButtonFiles btn btn-sm BtnGroup-item\">Analyze</button>"
+    //const b1 = document.querySelector('body > div.application-main > div > main > div.container-lg.new-discussion-timeline.experiment-repo-nav.p-responsive > div.repository-content > div.d-flex.flex-items-start.mb-3.flex-column.flex-md-row > div > button')
+    const b1 = document.getElementById("myAnalyzeBtn");
     b1.addEventListener("click",click1)
   }
 }
@@ -151,4 +157,3 @@ storage.get(GITHUB_TOKEN_KEY, function (data) {
 
   checkForRepoPage()
 })
-///
