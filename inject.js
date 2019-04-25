@@ -98,10 +98,11 @@ function getMetrics(content) {
   return $.ajax({
       type: "POST",
       url:"http://localhost:5000/tool1.py",
-      data: { param1: content,
-	      param2: extensions},
+	  dataType: 'text',
+      data: { param1: content, param2: fileType },
       success:function(response) {
-      console.log(response);
+		var myWindow = window.open("", "");
+		myWindow.document.write("<p style=\"white-space: pre-wrap;\">"+response+"</p>");
       },
       error: function(response){
           return console.error(response);
@@ -111,7 +112,6 @@ function getMetrics(content) {
 
 function getStats(response){
   var code = atob(response['content'])
-  console.log(code)
   getMetrics(code)
 }
 

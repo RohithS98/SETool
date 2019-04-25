@@ -52,19 +52,11 @@ def test():
 	    '.py' : 'Python',
 	    '.js' : 'JavaScript'
 	}'''
-	content=request.args.get('param1')
-	extension=request.args.get('param2')
-
-	# content = """def ApplyLizard(fileList):
-	#      analysis = {}
-	#      for i in fileList:
-	#          analysis[i] = lizard.analyze_file(i)
-	#      return analysis"""
-	# extension ="py"
-
-	return prettyPrint(applyLizard(content, extension))
-	print("---------------------------------------------------------------------")
-	print()
+	m = request.args
+	content=str(request.form['param1'])
+	extension=str(request.form['param2'])
+	t = prettyPrint(applyLizard(content, extension))
+	return t
 
 if __name__== '__main__':
 	lizard_file.run(debug=True)
