@@ -9,6 +9,7 @@ Metric Visualiser is a chrome plug-in for GitHub that allows visualisation of so
 3. WAMP/MAMP
 4. Python 3
 5. Flask
+6. Virtual Environment
 
 ## Installation Instructions
 
@@ -17,6 +18,7 @@ Metric Visualiser is a chrome plug-in for GitHub that allows visualisation of so
 3. Open chrome settings and click on extensions tab
 4. Enable developer mode and select *load unpacked*
 5. Select the downloaded folder
+6. Place lizard_file.py in the virtual environment(for setup details see below)
 
 ## Instructions to host a python file on FLASK server
 1. Downoad the latest Python from https://www.python.org/downloads/.
@@ -42,8 +44,14 @@ virtualenv myproject
   cd myproject
 ```
 8. If you list the contents of the myproject directory, you will see that it has created several sub-directories, including a bin folder (Scripts on Windows) that contains copies of both Python and pip. The next step is to activate your new virtualenv.
+
+For MAC:
 ```
 source bin/activate
+```
+For Windows:
+```
+path\to\venv\Scripts\activate.bat
 ```
 9. Installing FLASK in your virtualenv
 ```
