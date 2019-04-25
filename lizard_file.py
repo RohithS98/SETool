@@ -10,7 +10,7 @@ lizard_file=Flask(__name__)
 #Valid extensions for applying code complexity analysis
 
 def applyLizard(data_string, extension):
-    file_name = "test."+"py"
+    file_name = "test."+extension
     analysis = lizard.analyze_file.analyze_source_code(file_name, data_string)
     return analysis
 
