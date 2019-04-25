@@ -1,6 +1,6 @@
 # SETool
 
-Metric Visualiser is a chrome plug-in for GitHub that allows visualisation of source code metrics of source code files on GitHub in the browser.
+Metric Visualiser is a chrome plug-in for GitHub that shows the source code metrics of source code files on GitHub in the browser.
 
 ## Requirements
 
