@@ -77,7 +77,7 @@ Then open browser with ```http://localhost:5000/tool1.py ```
 1. Go to any GitHub repository and navigate to the required code file.
 2. Above the code, there will be a new button *Analyse*(see below). If it does not appear, then refresh the page.
 ![alt text](https://github.com/RohithS98/SETool/blob/master/pics/p1.PNG "Logo Title Text 1")
-3. To see the visualizations of code metrics, and already existing too, lizard is being used as the backend.
+3. To see the visualizations of code metrics, and already existing tool, lizard is being used as the backend.
 4. Lizard is written in python, and as the source code of the plugin is in JS, the python file needs to be called from the JS code using AJAX.
 5. Before that, the lizard python file has to be run on a server for which FLASK is used.
 6. To host that on FLASK server, first install FLASK in your home directory using the instrutions given in the above section.
