@@ -88,3 +88,6 @@ Then open browser with ```http://localhost:5000/tool1.py ```
 1. Visualisation of metrics.
 2. Adding difference between pull requests.
 3. Extending languages and metrics available.
+
+## References
+1. [Lizard](https://github.com/terryyin/lizard)
