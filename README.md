@@ -21,7 +21,7 @@ Metric Visualiser is a chrome plug-in for GitHub that shows the source code metr
 6. Place lizard_file.py in the virtual environment(for setup details see below)
 
 ## Instructions to host a python file on FLASK server
-1. Downoad the latest Python from https://www.python.org/downloads/.
+1. Download the latest Python from https://www.python.org/downloads/.
 2. Mac OS uses default 2.x version out of box. To check whether, python has been installed successfully. try the following command
 ```
 python3 -V
@@ -63,6 +63,7 @@ pip install FLASK
 myproject/bin/pip install -I lizard
 ```
 *-I* forces it to be installed in the virtualenv even when it is globally installed.
+
 12. Now to run the *lizard_file.py* in the server, run the following command on terminal
 ```
 python3 lizard_file.py
