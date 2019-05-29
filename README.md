@@ -22,7 +22,7 @@ Metric Visualiser is a chrome plug-in for GitHub that shows the source code metr
 
 ## Instructions to host a python file on FLASK server
 1. Download the latest Python from https://www.python.org/downloads/.
-2. Mac OS uses default 2.x version out of box. To check whether, python has been installed successfully. try the following command
+2. Mac OS uses default 2.x version out of box. To check whether, python has been installed successfully, try the following command
 ```
 python3 -V
 ```
