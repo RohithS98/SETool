@@ -28,7 +28,7 @@ python3 -V
 ```
 3. It will give the latest version of the python installed.
 4. We will install FLASK in a virtualenv for more priveleges of user permission.
-5. (For MAC OSX) To install virtualenv, open terminal and write 
+5. (For MAC OSX/Linux) To install virtualenv, open terminal and write 
 ```
 sudo pip3 install virtualenv
 virtualenv --version   
@@ -45,7 +45,7 @@ virtualenv myproject
 ```
 8. If you list the contents of the myproject directory, you will see that it has created several sub-directories, including a bin folder (Scripts on Windows) that contains copies of both Python and pip. The next step is to activate your new virtualenv.
 
-For MAC:
+For MAC/Linux:
 ```
 source bin/activate
 ```
