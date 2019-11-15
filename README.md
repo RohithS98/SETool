@@ -1,4 +1,4 @@
-# SETool
+# Visuatrics
 
 Metric Visualiser is a chrome plug-in for GitHub that shows the source code metrics of source code files on GitHub in the browser.
 
@@ -85,7 +85,7 @@ Then open browser with ```http://localhost:5000/tool1.py ```
 
 ## To Do
 
-1. Visualisation of metrics.
+1. Visualisation of metrics using graphs.
 2. Adding difference between pull requests.
 3. Extending languages and metrics available.
 
