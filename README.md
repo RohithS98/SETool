@@ -80,7 +80,7 @@ Then open browser with ```http://localhost:5000/tool1.py ```
 3. To see the visualizations of code metrics, and already existing tool, lizard is being used as the backend.
 4. Lizard is written in python, and as the source code of the plugin is in JS, the python file needs to be called from the JS code using AJAX.
 5. Before that, the lizard python file has to be run on a server for which FLASK is used.
-6. To host that on FLASK server, first install FLASK in your home directory using the instrutions given in the above section.
+6. To host that on FLASK server, first install FLASK in your home directory using the instructions given in the above section.
 7. Click on the analyze button to see the required results.
 
 ## To Do
